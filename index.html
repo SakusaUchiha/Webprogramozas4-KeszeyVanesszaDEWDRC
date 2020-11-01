@@ -1,0 +1,317 @@
+<!doctype html>
+<html>
+  <head>
+    <title>This is the title of the webpage!</title>
+    <title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+a:link {
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color: rgb(209, 209, 209);
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: rgb(0, 0, 0);
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+nav {
+  float: left;
+  width: 11%;
+  height: 1000px;
+  background: rgb(78, 115, 223);
+  padding: 20px;
+  color: white;
+  text-align: left;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 89%;
+  background-color: rgb(248, 249, 252);
+  height: 1000px;
+}
+
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#navlist {
+  position: relative;
+}
+
+#navlist li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: absolute;
+  top: 0;
+}
+
+#navlist li, #navlist a {
+  height: 44px;
+  display: block;
+}
+
+#doubleprev {
+  left: 1040px;
+  width: 46px;
+}
+
+#prev {
+  left: 1070px;
+  width: 46px;
+}
+
+#next {
+  left: 1100px;
+  width: 46px;
+}
+#doublenext {
+  left: 1130px;
+  width: 46px;
+}
+
+th {
+  border: 1px solid gray;
+  color: rgb(20, 118, 148);
+  text-align: left;
+  background-color: rgb(204, 203, 203);
+  padding: 10px;
+}
+
+table, td {
+  border: 1px solid gray;
+  color:black;
+  text-align: left;
+  padding: 20px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 40%;
+}
+
+td {
+  height: 50px;
+  vertical-align: bottom;
+}
+</style>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+<script>var article=[];
+  var data="";
+  function read(data, article, callback){
+    const fileUrl = "./input/data.txt";
+
+  fetch(fileUrl)
+    .then( r => r.text() )
+    .then( t => splitData(data, t, article) )
+   .then(parts => createArticles(parts,article))
+   .then(()=>callback())      
+  }
+  function splitData(d, text){    
+    d = text.split("$$$");
+    return d;   
+    }</script>
+
+  </head>
+  <body>
+
+    <section>
+      <nav>
+        <ul>
+          <li><h3><i class="fas fa-fan"style="font-size:36px;color:white;vertical-align:middle"></i><span style=""><a href="#"> MODELLEK</a></span></h3></li>
+          <hr>
+          <li><h5><i class="fas fa-newspaper"style="color:white;"></i><span style=""><a href="#"> HETILAP</a></span></h5></li>
+          <hr>
+          <li><h5><i class="fas fa-ghost"style="color:white;"></i><span style=""><a href="#"> ONLINE</a></span></h5></li>
+          <hr>
+          <li><h5><i class="fas fa-heart"style="color:white;"></i><span style=""><a href="#"> HETILAP+ONLINE</a></span></h5></li>
+          <hr>
+          <li><h3><i class="fas fa-dove"style="font-size:36px;color:white;vertical-align:middle"></i><span style=""><a href="#"> DEMÓ</a></span></h3></li>
+          <hr>
+          <li><h5><i class="fas fa-heart"style="color:white;"></i><span style=""><a href="#"> CÍMKÉZŐ</a></span></h5></li>
+          <hr>
+          <li><h5><i class="fas fa-horse"style="color:white;"></i><span style=""><a href="#"> TANÍTÓ</a></span></h5></li>
+        </ul>
+      </nav>
+      
+      <article>
+        <p style="font-size:30px;">címkeajánló - HETILAP</p>
+        <h5>Cikkek listája:</h5>
+
+        <ul id="navlist">
+          <li id="doubleprev"><i class="fas fa-angle-double-left"style="color:black;"></i><a href="#"></a></li>
+          <li id="prev"><i class="fas fa-angle-left"style="color:black;"></i><a href="#"class="previous round"></a></li>
+          <li id="next"><i class="fas fa-angle-right"style="color:black;"></i><a href="#"></a></li>
+          <li id="doublenext"><i class="fas fa-angle-double-right"style="color:black;"></i><a href="#"></a></li>
+        </ul>
+
+
+        <form action="action_form.php" method="get">
+          <input type="text" list="airports" name="airports" style="width: 900px;"> 
+          <datalist id="airports">
+          <option value="Research in Motion">
+          <option value="Fideszes viszály Miskolcon, Baráti tűz">
+          <option value="TÁVOZIK AZ AMERIKAI BLOGKIRÁLYNŐ, Ariana Huffigton vált">
+          <option value="Hogy hat a biblioterápia?, Ráolvasók">
+          <option value="A vírusok üzenete">
+          <option value="Kisgazda-Surányi kiegyezés">
+          <option value="Veszik vagy viszik?">
+          <option value="Globális genderszakadék-rangsor, 2009">
+          <option value="A HERZOG-GYŰJTEMÉNY ARANYKORA, Házimúzeum">
+          <option value="Elektromos autók végtelen látótávval">
+          <option value="Átrendeződés a telekommunikációs piacon, Kábel, a rengeteg">
+          <option value="Vészfizető kezesek">
+          <option value="a kolumbiai kokaintermelés">
+          <option value="Schuster vétója">
+          <option value="Áradások Ázsiában">
+          <option value="Mugabe osztogat">
+          <option value="KEHI-JELENTÉS A HUNGEXPO RT.-RŐL, Megmaradt a félpénzük">
+          <option value="CD + 100, The Very Best of Benjamin Britton">
+          <option value="EUROSTAT, Magyar jövedelemkülönbségek">
+          <option value="Közérzet-paradoxon: nehezebb életkörülmények közt boldogabban?">
+        </datalist>
+        <input type="submit" value="confirm">
+      </form>
+
+
+        <h5 >Valószínűség: 1.8</h5>
+        <form action="/action_page.php" style="float: right; margin-right:600px">
+          <input type="checkbox" id="vehicle1" name="vehicle1" value="min" onclick="myFunction()">
+          <label for="vehicle1">min.3</label><br>
+        </form>
+        <script>
+          function myFunction() {
+            var checkBox = document.getElementById("vehicle1");
+            var text = document.getElementById("text");
+            if (checkBox.checked == true){
+              text.style.display = "";
+            } else {
+               text.style.display = "none";
+            }
+            var text = document.getElementById("text1");
+            if (checkBox.checked == true){
+              text.style.display = "block";
+            } else {
+               text.style.display = "none";
+            }
+            var text = document.getElementById("text2");
+            if (checkBox.checked == true){
+              text.style.display = "block";
+            } else {
+               text.style.display = "none";
+            }
+            var text = document.getElementById("text3");
+            if (checkBox.checked == true){
+              text.style.display = "block";
+            } else {
+               text.style.display = "none";
+            }
+          }
+          </script>
+        
+        <form action="/action_page.php"
+          oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+            <input type="range" id="a" name="a" value="50" style="width: 800px;">
+        </form>
+
+        <table style="float: left">
+          <tr>
+            <th>Cikk szövege</th>
+          </tr>
+          <tr>
+            <td>24 dollár alá – két és fél éves mélypontjára – is benézett a Research in Motion (RIM) árfolyama a múlt héten. Borzolta a befektetők idegeit, hogy a BlackBerry okostelefon gyártójának második negyedévi bevétele 15 százalékkal elmaradt az előző negyedévitől. Még drasztikusabban – 1,46-ról 0,63 dollárra – esett vissza a cég egy részvényre jutó eredménye. Pozitívum ugyanakkor, hogy a társaság szabadalmakba fektetett pénzösszegének mértéke 22 százalékkal nőtt, miközben felvásárolta a Nortel 778 millió dollárra értékelt szellemi vagyonát, amivel tovább erősítheti alkalmazásainak fejlesztését. Bár az Equilor Befektetési Zrt. szerint a RIM az androidos készülékekkel és az iPhone okostelefonjaival a közeljövőben sem tud lépést tartani, a szabadalmakba és fejlesztésekbe fektetett összegek arra késztethetik versenytársait, hogy a jelenlegi alulértékelt szinten felvásárlási ajánlatot tegyenek a RIM-részvényekre. Ez pedig a kisbefektetőknek is vonzó sztorit jelenthet.</td>
+          </tr>
+        </table>
+        <table style="float: right; margin-right:250px">
+          <tr>
+            <th>Eredeti címkék</th>
+            <th>Ajánlott címkék</th>
+          </tr>
+          <tr>
+            <td><li>elektronikai ipar</li><li>értékpapírpiac</li><li>mobiltelefon</li><li>részvény</li></td>
+            <td><li>mobiltelefon (0.953)</li><p id="text" style="display:none">elektronikai ipar (0.783)</p><p id="text1" style="display:none">távközlés (0.083)</p></td>
+          </tr>
+        </table>
+
+        <table style="float: right; margin-right:250px; margin-top: 40px;">
+          <tr>
+            <th>Eredeti címkék (egyéb)</th>
+            <th>Ajánlott címkék (egyéb)</th>
+          </tr>
+          <tr>
+            <td><li>geography__kanada</li><li>organization__research in motion</li></td>
+            <td><li>geography__kanada (0.818)</li><p id="text2" style="display:none">organization__blackberry (0.030)</p><p id="text3" style="display:none">organization__research in motion (0.020)</p></td>
+          </tr>
+          </table>
+
+          <table style="float: left; width: 200px; border-left: 5px solid rgb(20, 118, 148); margin-top: 40px;">
+            <tr>
+              <th>HETILAP</th>
+            </tr>
+            <tr>
+              <td><li>cikk: 110 ezer</li><li>címke: 1023 db</li><li>token: 73 millió</li><li>type: 62 ezer</li></td>
+            </tr>
+          </table>
+
+          <table style="float: left; margin-left:50px; width: 200px; border-left: 5px solid rgb(20, 118, 148); margin-top: 40px;">
+            <tr>
+              <th>HETILAP +</th>
+            </tr>
+            <tr>
+              <td><li>cikk: 110 ezer</li><li>címke: 26901 db</li><li>token: 73 millió</li><li>type: 36 ezer</li></td>
+            </tr>
+          </table>
+
+          <table style="float: left; margin-left:50px; width: 200px; border-left: 5px solid rgb(44, 158, 101); margin-top: 32px;">
+            <tr>
+              <th style="color:rgb(44, 158, 101);">ONLINE</th>
+            </tr>
+            <tr>
+              <td><li>cikk: 80 ezer</li><li>címke: 76654 db</li><li>token: 35 millió</li><li>type: 33 ezer</li></td>
+            </tr>
+          </table>
+
+          <table style="float: left; margin-left:50px; width: 200px; border-left: 5px solid rgb(50, 152, 199); margin-top: 32px;">
+            <tr>
+              <th style="color:rgb(50, 152, 199);">HETILAP + ONLINE</th>
+            </tr>
+            <tr>
+              <td><li>cikk: 195 ezer</li><li>címke: 104432 db</li><li>token: 112 millió</li><li>type: 38 ezer</li></td>
+            </tr>
+          </table>
+
+      </article>
+
+      
+    </section>
+  </body>
+</html>
